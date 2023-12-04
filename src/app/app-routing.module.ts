@@ -4,7 +4,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { SearchComponent } from './search/search.component';
-import { RecipiesComponent } from './recipies/recipies.component';
 
 const routes: Routes = [
   {
@@ -16,8 +15,8 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'recipies', component: RecipiesComponent
-  }
+    path: 'recipies', loadChildren: () => import('./recipies/recipies.module').then(m => m.RecipiesModule)
+  },
 ];
 
 @NgModule({

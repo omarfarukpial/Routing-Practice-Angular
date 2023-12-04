@@ -1,10 +1,10 @@
-<div class="row m-5">
-    <div class="col-md-6 offset-md-3 mt-5">
-        <div class="input-group">
+<div class="row d-flex justify-content-center m-5">
+    <div class="col-6 mt-5 d-flex flex-column gap-3 justify-content-center align-items-center">
+        <div class="input-group d-flex justify-content-center align-items-center">
             <input [(ngModel)]="searchInput" class="form-control" placeholder="Enter food name">
-            <div class="input-group-append">
-                <button class="btn btn-dark" (click)="onSearch()">Search</button>
-            </div>
+        </div>
+        <div class="input-group d-flex justify-content-center align-items-center">
+            <button class="btn btn-dark " (click)="onSearch()">Recipie Search</button>
         </div>
     </div>
 </div>

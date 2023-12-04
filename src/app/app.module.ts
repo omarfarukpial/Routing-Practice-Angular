@@ -7,8 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { SearchComponent } from './search/search.component';
-import { RecipiesComponent } from './recipies/recipies.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,12 +17,12 @@ import { FormsModule } from '@angular/forms';
     WelcomeComponent,
     AboutComponent,
     SearchComponent,
-    RecipiesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
-    FormsModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

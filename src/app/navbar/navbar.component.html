@@ -1,11 +1,14 @@
 <div class="row">
     <div class="col-3">
-        <div class=" col-6 d-flex flex-column gap-5 border m-5 p-5">
-            <a class="btn btn-dark" routerLink="/home">Home</a>
-            <a class="btn btn-dark" routerLink="/search">Search</a>
-            <a class="btn btn-dark" routerLink="/about">About</a>
+        <div class=" col-6 d-flex flex-column border rounded m-5 p-5">
+            <a class="btn" routerLink="/home" routerLinkActive="active">Home</a>
+            <hr>
+            <a class="btn" routerLink="/search" routerLinkActive="active">Search</a>
+            <hr>
+            <a class="btn" routerLink="/about" routerLinkActive="active">About</a>
         </div>
     </div>
+    
     <div class="col-9">
         <router-outlet></router-outlet>
     </div>
