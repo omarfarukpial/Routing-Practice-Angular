@@ -21,15 +21,10 @@ export class RecipiesComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       this.searchInput = params['search'];
       this.recipiesService.setSearchInput(this.searchInput);
-      this.recipiesService.getRecipies();
-      this.recipiesService.recipiesObservable.subscribe((recipies: any) => {
-
-        this.recipies = recipies;
-        console.log(this.recipies);
+      this.recipiesService.getRecipies().subscribe((response: any) => {
+        const newRecipies = response.hits.map((hit: any) => hit.recipe);
+        this.recipies = [...this.recipies, ...newRecipies];
       });
     });
-
-
   }
-
 }
